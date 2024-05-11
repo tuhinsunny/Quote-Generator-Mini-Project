@@ -30,7 +30,7 @@ body {
     position: relative;
 }
 
-.quote-box h2::after{
+.quote-box h2::after {
     content: '';
     width: 75px;
     height: 3px;
@@ -41,20 +41,25 @@ body {
     left: 50%;
     transform: translatex(-50%);
 }
-.quote-box blockquote{
+
+.quote-box blockquote {
     font-size: 26px;
     min-height: 110px;
 }
-.quote-box blockquote::before, .quote-box blockquote::after{
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
     content: '"';
 }
-.quote-box span{
+
+.quote-box span {
     display: block;
     margin-top: 10px;
     float: right;
     position: relative;
 }
-.quote-box span::before{
+
+.quote-box span::before {
     content: '';
     width: 20px;
     height: 2px;
@@ -62,4 +67,42 @@ body {
     position: absolute;
     top: 50%;
     left: -30px;
+}
+
+.quote-box div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-box button {
+    background: rgb(23, 124, 229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(23, 124, 229);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.quote-box button .fa-brands {
+    width: 20px;
+    margin-right: 10px;
+    color: #177ce5;
+}
+
+.quote-box button:nth-child(2) {
+    background: transparent;
+    color: #333;
+}
+
+@media only screen and (max-width: 768px) {
+    .quote-box {
+        width: 350px;
+    }
 }
